@@ -1,0 +1,1 @@
+clear && python3 knapsack_dynamic.py $1
