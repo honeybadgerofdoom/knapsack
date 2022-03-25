@@ -32,7 +32,9 @@ def printKnapsack(knapsack):
     for row in range(len(knapsack)):
         for column in range(len(knapsack[row])):
             knapsack[row][column] = str(knapsack[row][column]).zfill(pad_length)
-    pprint.pprint(knapsack)
+    # pprint.pprint(knapsack)
+    for row in knapsack:
+        print(row)
 
 
 def solutionSet(n, W, M, weights, values):
@@ -54,9 +56,9 @@ def solutionSet(n, W, M, weights, values):
 
    
 def main():
-    values = [1, 6, 18, 22, 28] 
-    weights = [1, 2, 5, 6, 7] 
-    W = 11
+    values = [4,13,11,6] 
+    weights = [2,7,5,4] 
+    W = 10
     n = len(values)
     knapsack = knapSack(W, weights, values, n)
     printKnapsack(knapsack)
